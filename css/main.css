@@ -24,9 +24,9 @@ body {
   -ms-grid-columns: minmax(6rem, 1fr) (minmax(min-content, 16rem))[8] minmax(6rem, 1fr);
       grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(-webkit-min-content, 16rem)) minmax(6rem, 1fr);
       grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
-  -ms-grid-rows: (min-content)[3] 70vh min-content;
-      grid-template-rows: repeat(3, -webkit-min-content) 70vh -webkit-min-content;
-      grid-template-rows: repeat(3, min-content) 70vh min-content;
+  -ms-grid-rows: (min-content)[3] 70vh (min-content)[5];
+      grid-template-rows: repeat(3, -webkit-min-content) 70vh repeat(5, -webkit-min-content);
+      grid-template-rows: repeat(3, min-content) 70vh repeat(5, min-content);
   grid-row-gap: 1.6rem;
   margin-top: 1.6rem;
 }
@@ -583,5 +583,74 @@ body {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+}
+
+.bestselling {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2/10;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6/7;
+}
+
+.bestselling__header {
+  font-size: 4.5rem;
+  color: #23487f;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.bestselling__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 6.4rem;
+}
+
+.bestselling__card {
+  background-color: #efefef;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.bestselling__img {
+  width: 100%;
+  border-radius: .3rem .3rem 0 0;
+}
+
+.bestselling__heading {
+  background-color: #fffddd;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #458a9f;
+  padding: .5rem 0;
+  border-radius: .2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.bestselling__paragraph {
+  font-size: 1.9rem;
+  color: #23487f;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.bestselling__btn {
+  width: 100%;
+  padding: 1.6rem 0;
+  border: none;
+  background-color: #12376e;
+  color: white;
+  font-size: 1.9rem;
+  border-radius: 0 0 .3rem .3rem;
+}
+
+.bestselling__btn:hover {
+  background-color: #23487f;
 }
 /*# sourceMappingURL=main.css.map */

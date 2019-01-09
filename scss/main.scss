@@ -26,7 +26,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: minmax(6rem,1fr) repeat(8,minmax(min-content,16rem))minmax(6rem,1fr);
-    grid-template-rows: repeat(3,min-content) 70vh min-content;
+    grid-template-rows: repeat(3,min-content) 70vh repeat(5,min-content);
     grid-row-gap: 1.6rem;
     margin-top: 1.6rem;
 }
@@ -462,3 +462,68 @@ body {
 }
 
 // END OF DAY OFFER
+
+// BEST SELLING FURNITURE
+
+.bestselling{
+    grid-column: 2/10;
+    grid-row: 6/7;
+
+    &__header{
+        font-size: 4.5rem;
+        color: #23487f;
+        text-align: center;
+        margin: 3rem 0;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        grid-gap: 6.4rem;
+    }
+
+    &__card {
+        background-color: #efefef;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: .3rem .3rem 0 0;
+    }
+
+    &__heading {
+        background-color: #fffddd;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: 2.4rem;
+        color: #458a9f;
+        padding: .5rem 0;
+        border-radius: .2rem;
+        transform: translateY(-50%);
+    }
+
+    &__paragraph {
+        font-size: 1.9rem;
+        color: #23487f;
+        text-align: center;
+        margin-bottom: 1.6rem;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 1.6rem 0;
+        border: none;
+        background-color: #12376e;
+        color: white;
+        font-size: 1.9rem;
+        border-radius: 0 0 .3rem .3rem;
+
+        &:hover {
+            background-color: #23487f;
+        }
+    }
+}
+
+// END OF BEST SELLING FURNITURE
